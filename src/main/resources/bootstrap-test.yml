@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: zuul
+  cloud:
+    config:
+      uri: http://${CONFIG_SERVER}:8090
+      failFast: true
+    consul:
+      enabled: false

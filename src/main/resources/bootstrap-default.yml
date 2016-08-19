@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: zuul
+  config:
+    enabled:  true
+  cloud:
+    enabled:  false
+    bus:
+      enabled: false
+    discovery:
+      enabled: false
+    consul:
+      enabled: false
+    config:
+      enabled: false
+configuration-test: Hello there?
+security:
+  sessions: ALWAYS
+  oauth2:
+    client:
+      clientId: JQWRKHm3QM
+      clientSecret: qajJmYbPV2hTWXRASjje
+      accessTokenUri: https://test.appdirect.com/oauth/token
+      userAuthorizationUri: https://test.appdirect.com/oauth/authorize
+    resource:
+      preferTokenInfo:  false
+      userInfoUri: https://test.appdirect.com/oauth/openid/userinfo

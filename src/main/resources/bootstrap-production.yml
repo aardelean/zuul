@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: ${SERVICE_NAME}
+  cloud:
+    config:
+      uri: http://${CONFIG_SERVER}:8090
+      failFast: true
+    consul:
+      host: ${CONSUL_SERVER}

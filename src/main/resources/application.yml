@@ -1,0 +1,6 @@
+server:
+  port: 8003
+ribbon:
+  eureka:
+    enabled:  false
+
