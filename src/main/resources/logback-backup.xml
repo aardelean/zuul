@@ -1,0 +1,13 @@
+<configuration debug="true">
+
+	<appender name="SOCKET" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+		<encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+		<remoteHost>192.168.178.19</remoteHost>
+		<port>5006</port>
+		<reconnectionDelay>10000</reconnectionDelay>
+	</appender>
+
+	<root level="DEBUG">
+		<appender-ref ref="SOCKET" />
+	</root>
+</configuration>
