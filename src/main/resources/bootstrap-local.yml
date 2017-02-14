@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: zuul
+zuul:
+  forceOriginalQueryStringEncoding: true
+  host:
+    socket-timeout-millis:  60000
+  ignoreLocalService: false
+  routes:
+    microservice:
+      path: /microservice
+      sensitiveHeaders:
+      url: http://localhost:9300
+      stripPrefix: false
+    appdirect:
+      path: /**
+      sensitiveHeaders:
+      url: http://local.dev:8080/
+      stripPrefix: false
+security:
+  sessions: if_required
+  oauth2:
+    sso:
+      login-path: /login-sso
+    client:
+      clientId: K8ZoGoEXw2
+      clientSecret: 0tT3w8wSMBrjrnk9B9n5
+      accessTokenUri: http://local.dev:8100/oauth/token
+      userAuthorizationUri: http://local.dev:8100/oauth/authorize
+      pre-established-redirect-uri: http://local.dev:8100/login-sso
+      scope: openid, authorities
+      authentication-scheme: form
+    resource:
+      preferTokenInfo:  false
+      userInfoUri: http://local.dev:8100/oauth/openid/userinfo
+channelAdminResources: /microservice
+unprotectedResources: /**
+superuserResources: /endpoint/superuser
+userResources:  /endpoint/user

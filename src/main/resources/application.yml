@@ -1,5 +1,8 @@
 server:
-  port: 8003
+  port: 8100
+  session:
+    cookie:
+      name: ssoSessionID
 ribbon:
   eureka:
     enabled:  false

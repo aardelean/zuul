@@ -16,7 +16,7 @@
 		<reconnectionDelay>10000</reconnectionDelay>
 	</appender>
 
-	<root level="INFO">
+	<root level="WARN">
 		<appender-ref ref="SOCKET" />
 		<appender-ref ref="STDOUT" />
 	</root>
